@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+publish/
+
+# User/local state
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Debug symbols and logs
+*.pdb
+*.log
+
+# OS files
+Thumbs.db
+Desktop.ini
