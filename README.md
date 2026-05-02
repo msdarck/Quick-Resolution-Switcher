@@ -17,6 +17,7 @@ Custom presets are saved at:
 ## Requirements
 
 - .NET 10 SDK to build from source
+- .NET 10 Desktop Runtime to run the framework-dependent release build
 
 ## Build
 
@@ -27,13 +28,13 @@ dotnet build -c Release
 ## Publish
 
 ```powershell
-dotnet publish -c Release -r win-x64
+dotnet publish -c Release -p:SelfContained=false -p:PublishSelfContained=false -p:PublishSingleFile=true -p:RuntimeIdentifier=win-x64 -o .\publish\framework-dependent-single-file
 ```
 
 The executable is written to:
 
 ```text
-bin\Release\net10.0-windows\win-x64\publish\QuickResolutionSwitcher.exe
+publish\framework-dependent-single-file\QuickResolutionSwitcher.exe
 ```
 
 ## Notes
